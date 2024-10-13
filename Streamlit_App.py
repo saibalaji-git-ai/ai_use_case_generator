@@ -4,9 +4,13 @@ import plotly.express as px
 import plotly.graph_objects as go
 from market_research_agent import run_market_research_crew, compare_reports  
 import json
+import sys
+import streamlit as st
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from textblob import TextBlob
+
+st.write("Current Python version:", sys.version)
 
 # Set up the Streamlit page configuration
 st.set_page_config(page_title="Advanced Market Research & Use Case Generation Agent", layout="wide")
