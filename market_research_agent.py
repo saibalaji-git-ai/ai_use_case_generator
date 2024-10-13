@@ -5,6 +5,7 @@ from langchain.tools import Tool
 from langchain.utilities import SerpAPIWrapper
 from tavily import TavilyClient
 from langchain.llms import OpenAI
+from market_research_agent import run_market_research_crew, compare_reports
 import logging
 import json
 from functools import lru_cache
