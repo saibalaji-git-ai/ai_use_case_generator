@@ -19,7 +19,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 load_dotenv()
 
 # Get API key from environment or directly specify it
-openai_api_key = os.getenv("OPENAI_API_KEY", "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")
+openai_api_key = os.getenv("OPENAI_API_KEY", "sk-JFIPceRIpa2uuI4uFxGVGM3iSewhC8kuQplm_c1LW2T3BlbkFJ3eruqsrIsS8CPlHpiKZaS8pNr_jfxjzG3j8tde2BUA")
 
 # Load the API key from environment variables or specify it directly
 serpapi_api_key = os.getenv("SERPAPI_API_KEY", "d92d9ac959f6753f2d987e807cccbebea5663ec748adc9c1d6879fd46eb5ae79")
@@ -27,7 +27,9 @@ serpapi_api_key = os.getenv("SERPAPI_API_KEY", "d92d9ac959f6753f2d987e807cccbebe
 # Initialize language model and search tools
 llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
 serpapi = SerpAPIWrapper(serpapi_api_key=serpapi_api_key)
-tavily_client = TavilyClient(api_key=os.getenv("TAVILY_API_KEY"))
+tavily_api_key = os.getenv("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")  # Make sure this is set in your environment
+tavily_client = TavilyClient(api_key=tavily_api_key)
+
 
 # Define tools
 tavily_search = Tool(
