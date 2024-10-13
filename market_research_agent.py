@@ -27,8 +27,8 @@ serpapi_api_key = os.getenv("SERPAPI_API_KEY", "d92d9ac959f6753f2d987e807cccbebe
 # Initialize language model and search tools
 llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
 serpapi = SerpAPIWrapper(serpapi_api_key=serpapi_api_key)
-tavily_api_key = os.getenv("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")  # Make sure this is set in your environment
-tavily_client = TavilyClient(api_key=tavily_api_key)
+tavily_client = TavilyClient(api_key = os.getenv("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")  # Make sure this is set in your environment
+
 
 
 # Define tools
